@@ -1,0 +1,59 @@
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+}
+
+
+.modal .modal-container {
+    margin: auto;
+    width: 500px;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 4px;
+    padding: 1rem;
+    position: relative;
+}
+
+.modal .modal-container .close-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 50%;
+    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+
+}
+
+.close-icon  svg {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.4);
+}
+.close-icon  svg:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-container .modal-form div {
+    margin: 1rem 0;
+}
+
+.modal-form div>label {
+    font-size: 0.875rem;
+    display: block;
+    margin: 0.25rem 0;
+}
+
+.modal-form div>input {
+    width: 80%;
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+
+}

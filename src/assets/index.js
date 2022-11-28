@@ -1,0 +1,1 @@
+export {default as timeBg} from './timeBg.jpg'
