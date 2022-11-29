@@ -1,9 +1,10 @@
 import React from 'react'
+import { empty } from '../assets'
 
 const EventContainer = ({date}) => {
   return (
     <div className='event-container'>
-      EventContainer
+     <img src={empty} alt="empty" />
     </div>
   )
 }

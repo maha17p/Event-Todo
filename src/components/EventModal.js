@@ -1,32 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CloseIcon } from '../assets/svgIcons'
 import '../styles/eventmodal.css'
 
-const EventModal = () => {
+const EventModal = ({ setOpenModal }) => {
+    const openModalHandler = () => {
+        setOpenModal(prev => !prev)
+    }
     return (
-        <div className='modal'>
-            <div className='modal-container'>
-                <form className='modal-form'>
-                    <h4 className='title'>Add Event Details</h4>
-                    <div>
-                        <label>Event Title</label>
-                        <input type="text" />
-                    </div>
-                    <div>
-                        <label>Event Date</label>
-                        <input type="date" />
-                    </div>
-                    <div className='btn-container'>
-                        <button id='btn'>cancel</button>
-                        <button id='btn'>submit</button>
-                    </div>
-                </form>
+        <>
+            <div className='modal'>
+                <div className='modal-container'>
+                    <form className='modal-form'>
+                        <h4 className='title'>Add Event Details</h4>
+                        <div>
+                            <label>Event Title</label>
+                            <input type="text" />
+                        </div>
+                        <div>
+                            <label>Event Date</label>
+                            <input type="date" />
+                        </div>
+                        <div className='btn-container'>
+                            <button id='btn'>cancel</button>
+                            <button id='btn'>submit</button>
+                        </div>
+                    </form>
 
-                <p class='close-icon'>
-                    <CloseIcon />
-                </p>
+                    <p onClick={openModalHandler} class='close-icon' >
+                        <CloseIcon />
+                    </p>
+                </div>
             </div>
-        </div>
+
+
+        </>
     )
 }
 
